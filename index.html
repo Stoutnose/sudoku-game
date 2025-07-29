@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sudoku Game</h1>
+
+  <div id="sudoku-board"></div>
+
+  <div class="controls">
+    <div class="number-pad">
+      <p>Number Pad:</p>
+      <div id="number-buttons"></div>
+    </div>
+    <div class="numbers">
+      <button onclick="deleteNumber()">Delete</button>
+      <button onclick="hint()">Hint</button>
+      <button onclick="checkMistakes()">Check Mistakes</button>
+      <button onclick="validatePuzzle()">Validate Puzzle</button>
+      <button onclick="resetPuzzle()">Reset Puzzle</button>
+      <button onclick="newGame()">New Game</button>
+    </div>
+    <div class="difficulty">
+      <p>Difficulty:</p>
+      <button onclick="setDifficulty('Easy')">Easy</button>
+      <button onclick="setDifficulty('Medium')">Medium</button>
+      <button onclick="setDifficulty('Hard')">Hard</button>
+    </div>
+    <div class="timer">
+      <p id="timer">Time: 00:00:00</p>
+      <button onclick="startTimer()">Start Timer</button>
+      <button onclick="stopTimer()">Stop Timer</button>
+      <button onclick="pauseResumeGame()" id="pauseBtn">Pause Game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
